@@ -7,20 +7,27 @@ h1{
     width:80%;
 }
 body{
-
+    overflow-x:hidden;
     width:100vw;
     height:100vh;
     background-image: radial-gradient(circle at center center, rgb(229, 229, 229),rgb(116, 116, 116));
 }
 #grid{
     display:grid;
+    top:0;
+    left:0;
+    position:absolute;
+    width:100vw;
+    margin:0;
     grid-template-areas:
     "header header"
-    "side main";
+    "sideBar main";
 }
 #Header{
     display:block;
-    grid-area:"header";
+    background-color:white;
+    box-shadow:0 8px 8px gray;
+    grid-area:header;
     height:20vh;
     font-size:100px;
     align-self:center;
@@ -29,18 +36,18 @@ body{
 }
 #side{
     display:block;
-    grid-area:"side";
+    grid-area:sideBar;
     width:20vw;
     margin:0 0 0;
     height:100vh;
 }
-#main{
-    display:block;
-    grid-area:"main";
-    width:80vw;
+#Main{
+    overflow-y:visible;
+    grid-area:main;
+    width:100%;
 }
 .cooking{
-    width:100vw;
+    width:100%;
     text-align:center;
 }
 p{
